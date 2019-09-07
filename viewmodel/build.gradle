@@ -29,6 +29,9 @@ dependencies {
 
     def libs = rootProject.ext
 
+    implementation project(':shared')
+    implementation project(':model')
+
     libs.kotlin.values().each { implementation it }
     libs.android_support_libs.values().each { implementation it }
     libs.kodein.values().each { implementation it }
