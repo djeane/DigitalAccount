@@ -26,8 +26,20 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    def libs = rootProject.ext
+
+    libs.kotlin.values().each { implementation it }
+    libs.android_support_libs.values().each { implementation it }
+    libs.kodein.values().each { implementation it }
+    libs.rx_libs.values().each { implementation it }
+    libs.retrofit_libs.values().each { implementation it }
+    libs.okhttp_libs.values().each { implementation it }
+    libs.stetho_libs.values().each { implementation it }
+    libs.android_tests.values().each { androidTestImplementation it }
+    implementation libs.gson
+    testImplementation libs.junit
+    /*implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'*/
 }
