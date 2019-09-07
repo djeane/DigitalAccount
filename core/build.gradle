@@ -25,6 +25,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(':shared')
+    implementation project(':viewmodel')
+    implementation project(':model')
+
     def libs = rootProject.ext
 
     libs.kotlin.values().each { implementation it }

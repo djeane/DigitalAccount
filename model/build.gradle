@@ -25,6 +25,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(':shared')
+
     def libs = rootProject.ext
 
     libs.kotlin.values().each { implementation it }
