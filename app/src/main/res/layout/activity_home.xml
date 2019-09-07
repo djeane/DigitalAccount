@@ -60,9 +60,9 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="48dp"
             android:textColor="@color/text_white"
-            android:id="@+id/appCompatButton"
+            android:id="@+id/button_send_money"
             android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/appCompatButton2"/>
+            app:layout_constraintBottom_toTopOf="@+id/button_transfer_history"/>
 
     <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
@@ -70,11 +70,11 @@
             android:text="Histórico de envios"
             android:background="@drawable/home_buttons_background"
             android:textColor="@color/text_white"
-            app:layout_constraintStart_toStartOf="@+id/appCompatButton"
-            app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
+            app:layout_constraintStart_toStartOf="@+id/button_send_money"
+            app:layout_constraintEnd_toEndOf="@+id/button_send_money"
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/appCompatButton2"
+            android:id="@+id/button_transfer_history"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"/>
 
