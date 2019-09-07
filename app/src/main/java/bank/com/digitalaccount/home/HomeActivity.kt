@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import bank.com.digitalaccount.R
 import bank.com.digitalaccount.sendmoney.SendMoneyActivity
+import bank.com.digitalaccount.transferhistory.TransferHistoryActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         button_transfer_history.setOnClickListener {
-
+            startActivity(TransferHistoryActivity.getIntent(this))
         }
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@color/colorPrimaryDark"
+            app:roundingBorderWidth="2dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/simpleDraweeView"/>
+
+    <View
+            android:id="@+id/view_graphic"
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/simpleDraweeView"
+            app:layout_constraintEnd_toEndOf="@+id/simpleDraweeView"
+            app:layout_constraintStart_toStartOf="@+id/simpleDraweeView"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.210,10"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_graphic"
+            app:layout_constraintStart_toStartOf="@+id/simpleDraweeView"
+            app:layout_constraintEnd_toEndOf="@+id/simpleDraweeView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
