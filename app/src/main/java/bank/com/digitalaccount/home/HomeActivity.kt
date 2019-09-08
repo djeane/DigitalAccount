@@ -1,5 +1,7 @@
 package bank.com.digitalaccount.home
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import bank.com.digitalaccount.R
 import bank.com.digitalaccount.sendmoney.SendMoneyActivity
@@ -40,5 +42,9 @@ class HomeActivity : BaseActivity() {
         button_transfer_history.setOnClickListener {
             startActivity(TransferHistoryActivity.getIntent(this))
         }
+    }
+
+    companion object{
+        fun getIntent(context: Context) = Intent(context, HomeActivity::class.java)
     }
 }

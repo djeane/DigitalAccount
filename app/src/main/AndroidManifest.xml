@@ -14,19 +14,16 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".dialogtosendmoney.DialogSendMoneyActivity">
-        </activity>
-        <activity android:name=".transferhistory.TransferHistoryActivity">
-        </activity>
-        <activity android:name=".sendmoney.SendMoneyActivity">
-        </activity>
-        <activity android:name=".home.HomeActivity">
+        <activity android:name=".SplashActivity"
+                android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".transferhistory.TransferHistoryActivity"/>
+        <activity android:name=".sendmoney.SendMoneyActivity"/>
+        <activity android:name=".home.HomeActivity"/>
 
         <meta-data
                 android:name="preloaded_fonts"
