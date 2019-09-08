@@ -6,8 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/root"
-        android:layout_margin="16dp"
-        tools:context=".dialogtosendmoney.DialogSendMoneyActivity">
+        android:layout_margin="16dp">
 
     <androidx.cardview.widget.CardView
             android:id="@+id/cv_send_money"
@@ -100,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:textColorHint="@color/colorAccent"
                     android:hint="R$ 0,00"
+                    android:textColor="@color/colorAccent"
                     android:padding="8dp"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -111,7 +111,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginEnd="32dp"
                     android:layout_marginStart="32dp"
-                    android:id="@+id/editText"
+                    android:id="@+id/et_amount"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp"/>
 
@@ -125,9 +125,9 @@
                     android:textColor="@color/text_white"
                     android:background="@drawable/home_buttons_background"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/editText"
-                    app:layout_constraintStart_toStartOf="@+id/editText"
-                    app:layout_constraintEnd_toEndOf="@+id/editText"
+                    app:layout_constraintTop_toBottomOf="@+id/et_amount"
+                    app:layout_constraintStart_toStartOf="@+id/et_amount"
+                    app:layout_constraintEnd_toEndOf="@+id/et_amount"
                     android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>

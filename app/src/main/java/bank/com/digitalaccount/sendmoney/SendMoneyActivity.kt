@@ -62,9 +62,7 @@ class SendMoneyActivity : BaseActivity() {
     private fun showDialogToSendMoney(account: AccountReceiverUIModel) {
         val ft = supportFragmentManager!!.beginTransaction()
         val prev = supportFragmentManager!!.findFragmentByTag("dialog")
-        if (prev != null) {
-            ft.remove(prev)
-        }
+        if (prev != null) { ft.remove(prev) }
         val dialog = DialogToSendMoney.getInstance(account)
         dialog.show(ft, "dialog")
     }

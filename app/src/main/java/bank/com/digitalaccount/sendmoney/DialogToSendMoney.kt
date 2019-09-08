@@ -2,11 +2,14 @@ package bank.com.digitalaccount.sendmoney
 
 import android.content.DialogInterface
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import bank.com.digitalaccount.R
+import bank.com.shared.views.MoneyTextWatcher
 import bank.com.viewmodel.sendmoney.AccountReceiverUIModel
 import kotlinx.android.synthetic.main.activity_dialog_send_money.*
 
@@ -22,8 +25,14 @@ class DialogToSendMoney : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         account.image?.let { sp_user_image.setImageURI(it) }
         tv_username.text = account.formattingUserName()
+        et_amount.hint?.let { et_amount.setSelection(0) }
         tv_phone_number.text = account.formattingPhoneNumber()
         iv_close.setOnClickListener { this.dismiss() }
+        applyCurrencyMask()
+    }
+
+    private fun applyCurrencyMask(){
+        et_amount.addTextChangedListener(MoneyTextWatcher(et_amount))
     }
 
     override fun onDismiss(dialog: DialogInterface) {
