@@ -3,11 +3,11 @@ package bank.com.viewmodel.sendmoney
 import java.io.Serializable
 
 data class AccountReceiverUIModel(
-    private val fistName: String,
-    private val lastName: String,
-    private val phoneNumber: String,
-    private val id: String,
-    private val token: String
+    val fistName: String,
+    val lastName: String,
+    val phoneNumber: String,
+    val id: Int,
+    val clientId: Int
 ) : Serializable {
 
     fun formattingUserName(): String {

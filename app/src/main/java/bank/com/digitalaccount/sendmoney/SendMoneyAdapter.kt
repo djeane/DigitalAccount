@@ -9,7 +9,7 @@ import bank.com.viewmodel.sendmoney.AccountReceiverUIModel
 
 class SendMoneyAdapter(
     private val context: Context,
-    private val list: List<AccountReceiverUIModel>
+    list: List<AccountReceiverUIModel>
 ) : SelectableAdapter<AccountReceiverUIModel, SendMoneyViewHolder>(list) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

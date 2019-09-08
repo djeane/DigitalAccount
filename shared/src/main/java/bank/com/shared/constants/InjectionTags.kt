@@ -10,4 +10,11 @@ object InjectionTags {
 
     //MODEL TAGS
     const val SEND_MONEY_MODEL = "sendMoneyModel"
+    const val GENERATE_TOKEN_MODEL = "generateTokenModel"
+    const val TRANSFER_HISTORY_MODEL = "transferHistoryModel"
+
+
+    //API
+    const val RETROFIT_API = "retrofitApi"
+    const val OKHTTP_API = "okhttpApi"
 }
