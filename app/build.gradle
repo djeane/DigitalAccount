@@ -46,6 +46,7 @@ dependencies {
     implementation libs.fresco
     libs.stetho_libs.values().each { implementation it }
     libs.android_tests.values().each { androidTestImplementation it }
+    implementation libs.rxbinding
     implementation libs.gson
     testImplementation libs.junit
 }
