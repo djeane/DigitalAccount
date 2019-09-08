@@ -6,6 +6,8 @@ object InjectionTags {
 
     //VIEW MODEL TAGS
     const val SEND_MONEY_VIEW_MODEL = "sendMoneyViewModel"
+    const val HOME_VIEW_MODEL = "homeViewModel"
+    const val TRANSFER_HISTORY_VIEW_MODEL = "transferHistoryViewModel"
 
 
     //MODEL TAGS

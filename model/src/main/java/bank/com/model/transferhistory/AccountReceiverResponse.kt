@@ -1,6 +1,7 @@
 package bank.com.model.transferhistory
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 class AccountReceiverResponse(
     @SerializedName("id") val id: Int, // meu id
@@ -8,5 +9,5 @@ class AccountReceiverResponse(
     @SerializedName("token") val token: String, //é o meu próprio token
     @SerializedName("valor") val valor: Double,
     @SerializedName("Data") val date: String
-)
+) : Serializable
 

@@ -9,10 +9,10 @@ import io.reactivex.Single
 class SendMoneyViewModel(private val sendMoneyModel: SendMoneyModel) {
 
     fun sendMoney(id: Int, amount: Double, token: String = "nkmdfmklfmkdmf"): Single<Boolean> =
-            sendMoneyModel.sendMoney(AccountSenderRequest(clienteId = id, amount = amount, token = token))
-                .applyIoToMainThread()
-                .flatMap {
-                    Single.just(it)
-                }
+        sendMoneyModel.sendMoney(AccountSenderRequest(clienteId = id, amount = amount, token = token))
+            .applyIoToMainThread()
+            .flatMap {
+                Single.just(it)
+            }
 
 }

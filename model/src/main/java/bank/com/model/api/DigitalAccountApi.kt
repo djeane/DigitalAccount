@@ -1,7 +1,7 @@
 package bank.com.model.api
 
-import bank.com.model.transferhistory.AccountReceiverResponse
 import bank.com.model.sendmoney.AccountSenderRequest
+import bank.com.model.transferhistory.AccountReceiverResponse
 import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.Body

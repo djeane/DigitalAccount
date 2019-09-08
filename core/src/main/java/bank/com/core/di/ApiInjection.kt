@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiInjection {
 
-    val apiModule = Kodein.Module{
+    val apiModule = Kodein.Module {
 
         bind<DigitalAccountApi>() with singleton {
             instance<Retrofit>(RETROFIT_API).create(DigitalAccountApi::class.java)

@@ -5,13 +5,13 @@ import androidx.recyclerview.widget.RecyclerView
 
 abstract class SelectableAdapter<T, VH : SelectableViewHolder<T>>(
     items: List<T>
-): RecyclerView.Adapter<VH>(), OnItemSelected<T> {
+) : RecyclerView.Adapter<VH>(), OnItemSelected<T> {
 
-    open var selectedItem : SelectableItem<T>? = null
-    protected set
+    open var selectedItem: SelectableItem<T>? = null
+        protected set
 
     val isAnyItemSelected: Boolean
-    get() = selectedItem != null
+        get() = selectedItem != null
 
     private var items = items
 
@@ -23,9 +23,9 @@ abstract class SelectableAdapter<T, VH : SelectableViewHolder<T>>(
         holder.bind(selectableItem)
     }
 
-    private fun getSelectableFromItem(item: T) = selectableItems.find { it.model == item}
+    private fun getSelectableFromItem(item: T) = selectableItems.find { it.model == item }
 
-    private fun createSelectableItem(item: T, position: Int): SelectableItem<T>{
+    private fun createSelectableItem(item: T, position: Int): SelectableItem<T> {
         val selectableItem = SelectableItem(
             isSelected = false,
             model = item,
@@ -41,13 +41,13 @@ abstract class SelectableAdapter<T, VH : SelectableViewHolder<T>>(
         notifyDataSetChanged()
     }
 
-    private fun deselectOthersItems(){
+    private fun deselectOthersItems() {
         selectableItems.filter { it.isSelected && it !== selectedItem }
             .map { it.isSelected = false }
     }
 
     @CallSuper
-    open fun updateItems(items: List<T>){
+    open fun updateItems(items: List<T>) {
         this.items = items
         selectableItems.clear()
         notifyDataSetChanged()
