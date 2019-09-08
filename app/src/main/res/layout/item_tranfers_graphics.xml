@@ -4,38 +4,44 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
     <com.facebook.drawee.view.SimpleDraweeView
             android:layout_width="40sp"
             android:layout_height="40sp"
+            app:roundingBorderWidth="1dp"
             app:roundAsCircle="true"
-            app:roundingBorderColor="@color/colorPrimaryDark"
-            app:roundingBorderWidth="2dp"
+            app:roundingBorderColor="@color/colorAccent"
+            app:backgroundImage="@color/colorPrimary"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/simpleDraweeView"/>
+            android:id="@+id/sdv_user_image"/>
 
     <View
             android:id="@+id/view_graphic"
             android:layout_width="2dp"
             android:layout_height="100dp"
-            android:background="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toTopOf="@+id/simpleDraweeView"
-            app:layout_constraintEnd_toEndOf="@+id/simpleDraweeView"
-            app:layout_constraintStart_toStartOf="@+id/simpleDraweeView"/>
+            android:background="@drawable/background_gradient"
+            app:layout_constraintBottom_toTopOf="@+id/sdv_user_image"
+            app:layout_constraintEnd_toEndOf="@+id/sdv_user_image"
+            app:layout_constraintStart_toStartOf="@+id/sdv_user_image"/>
 
     <TextView
+            android:id="@+id/tv_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1.210,10"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/colorAccent"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/view_graphic"
-            app:layout_constraintStart_toStartOf="@+id/simpleDraweeView"
-            app:layout_constraintEnd_toEndOf="@+id/simpleDraweeView"/>
+            app:layout_constraintStart_toStartOf="@+id/sdv_user_image"
+            app:layout_constraintEnd_toEndOf="@+id/sdv_user_image"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

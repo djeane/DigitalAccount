@@ -8,7 +8,8 @@ data class AccountReceiverUIModel(
     val phoneNumber: String,
     val id: Int,
     val clientId: Int,
-    var image: String? = null
+    var image: String? = null,
+    var amount: Double = 0.0
 ) : Serializable {
 
     fun formattingUserName(): String {

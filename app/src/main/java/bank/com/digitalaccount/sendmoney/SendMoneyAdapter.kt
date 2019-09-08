@@ -13,22 +13,22 @@ import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.item_user_account_transfer.view.*
 
 @SuppressLint("CheckResult")
-class SendMoneyNewAdapter(
+class SendMoneyAdapter(
     private val context: Context,
     private val accounts: List<AccountReceiverUIModel>,
     private val publish: PublishSubject<Interaction>
-) : RecyclerView.Adapter<SendMoneyNewAdapter.SendMoneyNewViewHolder>() {
+) : RecyclerView.Adapter<SendMoneyAdapter.SendMoneyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        SendMoneyNewViewHolder(LayoutInflater.from(context).inflate(R.layout.item_user_account_transfer, parent, false))
+        SendMoneyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_user_account_transfer, parent, false))
 
-    override fun onBindViewHolder(holder: SendMoneyNewViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SendMoneyViewHolder, position: Int) {
         accounts[position].let { holder.bind(it) }
     }
 
     override fun getItemCount() = accounts.size
 
-    inner class SendMoneyNewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class SendMoneyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(account: AccountReceiverUIModel) {
             account.image?.let { itemView.sdv_image_user_account_transfer.setImageURI(it) }
