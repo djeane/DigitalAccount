@@ -12,6 +12,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             app:roundAsCircle="true"
+            app:fadeDuration="300"
             app:backgroundImage="@color/colorPrimary"
             app:roundingBorderWidth="6dp"
             app:actualImageScaleType="centerCrop"

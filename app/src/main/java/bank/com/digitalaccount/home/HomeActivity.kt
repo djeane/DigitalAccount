@@ -21,7 +21,15 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        initUi()
         applyListeners()
+    }
+
+    override fun initUi() {
+        super.initUi()
+        sp_user_image.setImageURI(
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbQE4U0SFyX6HQAVxsDw59KS7HCWKo3CyvoexeSc_EMO04Dc20"
+        )
     }
 
     private fun applyListeners() {
