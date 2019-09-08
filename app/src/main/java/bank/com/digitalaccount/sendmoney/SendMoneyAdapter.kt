@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import bank.com.digitalaccount.R
-import bank.com.digitalaccount.base.SelectableAdapter
+import bank.com.shared.base.SelectableAdapter
 import bank.com.viewmodel.sendmoney.AccountReceiverUIModel
 
 class SendMoneyAdapter(

@@ -1,4 +1,4 @@
-package bank.com.digitalaccount.base
+package bank.com.shared.base
 
 data class SelectableItem<T>(
     var isSelected: Boolean,

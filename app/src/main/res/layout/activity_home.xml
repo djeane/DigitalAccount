@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/background_gradient"
         tools:context=".home.HomeActivity">
 
     <com.facebook.drawee.view.SimpleDraweeView
@@ -13,35 +13,37 @@
             android:layout_height="180dp"
             app:roundAsCircle="true"
             app:backgroundImage="@color/colorPrimary"
-            app:roundingBorderWidth="8dp"
-            app:roundingBorderColor="@color/colorPrimaryDark"
+            app:roundingBorderWidth="6dp"
+            app:actualImageScaleType="centerCrop"
+            app:roundingBorderColor="@color/colorAccent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/sp_user_image"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
-            app:layout_constraintVertical_bias="0.3"/>
+            android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_send_money"/>
 
     <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Djeane Barros"
+            android:text="Juliana Trindade"
             android:layout_marginTop="8dp"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/text_white"
             app:layout_constraintTop_toBottomOf="@+id/sp_user_image"
             app:layout_constraintStart_toStartOf="@+id/sp_user_image"
-            app:layout_constraintEnd_toEndOf="@+id/sp_user_image"/>
+            app:layout_constraintEnd_toEndOf="@+id/sp_user_image"
+            app:fontFamily="@font/amiko"
+            android:fontFamily="monospace"/>
 
     <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="djeane@email.com"
-            android:textSize="18sp"
+            android:textSize="16sp"
+            app:fontFamily="@font/amiko"
             android:textColor="@color/text_white"
             app:layout_constraintTop_toBottomOf="@+id/tv_username"
             app:layout_constraintStart_toStartOf="@+id/sp_user_image"
@@ -56,6 +58,8 @@
             android:layout_marginEnd="48dp"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
+            android:textSize="18sp"
+            app:fontFamily="@font/amiko"
             android:background="@drawable/home_buttons_background"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="48dp"
@@ -76,6 +80,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/button_transfer_history"
             android:paddingTop="8dp"
+            android:textSize="18sp"
+            app:fontFamily="@font/amiko"
             android:paddingBottom="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

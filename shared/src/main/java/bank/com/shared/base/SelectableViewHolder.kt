@@ -1,4 +1,4 @@
-package bank.com.digitalaccount.base
+package bank.com.shared.base
 
 import android.view.View
 import androidx.annotation.CallSuper

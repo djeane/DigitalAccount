@@ -1,4 +1,4 @@
-package bank.com.digitalaccount.base
+package bank.com.shared.base
 
 interface OnItemSelected<T> {
     fun itemSelected(selectableItem: SelectableItem<T>)
