@@ -6,8 +6,8 @@ class TransferAccountsUiModel {
             val accounts = ArrayList<AccountReceiverUIModel>()
 
             val account1 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
+                fistName = "Fatima",
+                lastName = "Santos",
                 phoneNumber = "(11) 11111-1111",
                 id = 115152,
                 clientId = 322551,
@@ -19,7 +19,7 @@ class TransferAccountsUiModel {
             val account2 = AccountReceiverUIModel(
                 fistName = "Solange",
                 lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                phoneNumber = "(11) 85498-9990",
                 id = 1544555,
                 clientId = 7545330,
                 amount = 125.25
@@ -27,9 +27,9 @@ class TransferAccountsUiModel {
             )
 
             val account3 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Adriana",
+                lastName = "Oliveira",
+                phoneNumber = "(11) 59599-1111",
                 id = 751545,
                 amount = 146.78,
                 clientId = 1646645,
@@ -37,9 +37,9 @@ class TransferAccountsUiModel {
             )
 
             val account4 = AccountReceiverUIModel(
-                fistName = "Solange",
+                fistName = "Paola Oliveira",
                 lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                phoneNumber = "(11) 69996-1895",
                 id = 662067,
                 amount = 87.21,
                 clientId = 5665310,
@@ -47,9 +47,9 @@ class TransferAccountsUiModel {
             )
 
             val account5 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Giovanna",
+                lastName = "Sousa",
+                phoneNumber = "(11) 58954-1134",
                 id = 56892,
                 amount = 325.25,
                 clientId = 3265600,
@@ -57,9 +57,9 @@ class TransferAccountsUiModel {
             )
 
             val account6 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Ana Paula",
+                lastName = "Braga",
+                phoneNumber = "(11) 42423-5545",
                 id = 2552154,
                 amount = 258.21,
                 clientId = 2266005
@@ -67,9 +67,9 @@ class TransferAccountsUiModel {
             )
 
             val account7 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Barbara",
+                lastName = "Paz",
+                phoneNumber = "(19) 13434-4343",
                 id = 3006,
                 amount = 136.84,
                 clientId = 655323,
@@ -77,9 +77,9 @@ class TransferAccountsUiModel {
             )
 
             val account8 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Amanda",
+                lastName = "Silva",
+                phoneNumber = "(11) 43433-3434",
                 id = 2121233,
                 amount = 65.84,
                 clientId = 15445
@@ -87,9 +87,9 @@ class TransferAccountsUiModel {
             )
 
             val account9 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Ana Claudia",
+                lastName = "Amora",
+                phoneNumber = "(11) 43434-3232",
                 id = 5999,
                 amount = 45.45,
                 clientId = 26565,
@@ -97,9 +97,9 @@ class TransferAccountsUiModel {
             )
 
             val account10 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Stephane",
+                lastName = "Boa Vida",
+                phoneNumber = "(11) 43434-4343",
                 id = 5496565,
                 amount = 54.81,
                 clientId = 32656,
@@ -107,29 +107,29 @@ class TransferAccountsUiModel {
             )
 
             val account11 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Jeane",
+                lastName = "Barros",
+                phoneNumber = "(11) 33222-4343",
                 id = 8484,
                 amount = 94.72,
-                clientId = 464,
-                image = "https://www.thefandomentals.com/wp-content/uploads/2018/03/Katniss-screen.jpg"
+                clientId = 464
+                //image = "https://www.thefandomentals.com/wp-content/uploads/2018/03/Katniss-screen.jpg"
             )
 
             val account12 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Ester",
+                lastName = "Santos",
+                phoneNumber = "(11) 44344-3333",
                 id = 565565,
                 amount = 58.40,
-                clientId = 6656,
-                image = "https://c8.alamy.com/comp/C68ABF/yaya-dacosta-at-arrivals-for-the-kids-are-all-right-premiere-landmark-C68ABF.jpg"
+                clientId = 6656
+                //image = "https://c8.alamy.com/comp/C68ABF/yaya-dacosta-at-arrivals-for-the-kids-are-all-right-premiere-landmark-C68ABF.jpg"
             )
 
             val account13 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Adria",
+                lastName = "Silva",
+                phoneNumber = "(11) 43433-3434",
                 id = 1166,
                 amount = 67.47,
                 clientId = 546,
@@ -137,9 +137,9 @@ class TransferAccountsUiModel {
             )
 
             val account14 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Claudiana",
+                lastName = "Oliveira",
+                phoneNumber = "(11) 59591-0591",
                 id = 35466,
                 amount = 48.92,
                 clientId = 1146,
@@ -147,9 +147,9 @@ class TransferAccountsUiModel {
             )
 
             val account15 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Fernanda",
+                lastName = "Oliveira",
+                phoneNumber = "(11) 43434-3567",
                 id = 1642131,
                 amount = 45.21,
                 clientId = 4545,
@@ -157,19 +157,19 @@ class TransferAccountsUiModel {
             )
 
             val account16 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Juliana",
+                lastName = "Ferreira",
+                phoneNumber = "(11) 43434-4444",
                 id = 16464630,
                 amount = 125.47,
-                clientId = 1646463,
-                image = "https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/chyler-leigh_768x1024.png"
+                clientId = 1646463
+                //image = "https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/chyler-leigh_768x1024.png"
             )
 
             val account17 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Sonia",
+                lastName = "Braga",
+                phoneNumber = "(11) 56565-3444",
                 id = 16464630,
                 amount = 152.64,
                 clientId = 1646463,
@@ -177,19 +177,19 @@ class TransferAccountsUiModel {
             )
 
             val account18 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Silvana",
+                lastName = "Soares",
+                phoneNumber = "(11) 95911-1606",
                 id = 145582,
                 amount = 154.85,
-                clientId = 124544,
-                image = "https://st2.depositphotos.com/3752845/10266/i/950/depositphotos_102662746-stock-photo-chyler-leigh-at-supergirl.jpg"
+                clientId = 124544
+                //image = "https://st2.depositphotos.com/3752845/10266/i/950/depositphotos_102662746-stock-photo-chyler-leigh-at-supergirl.jpg"
             )
 
             val account19 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Julia",
+                lastName = "Junqueira",
+                phoneNumber = "(11) 99888-5851",
                 id = 16464630,
                 amount = 175.82,
                 clientId = 1646463,
@@ -197,9 +197,9 @@ class TransferAccountsUiModel {
             )
 
             val account20 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Katie",
+                lastName = "McGrath",
+                phoneNumber = "(21) 44311-1111",
                 id = 16464630,
                 amount = 162.42,
                 clientId = 1646463,
@@ -207,13 +207,13 @@ class TransferAccountsUiModel {
             )
 
             val account21 = AccountReceiverUIModel(
-                fistName = "Solange",
-                lastName = "Agora",
-                phoneNumber = "(11) 11111-1111",
+                fistName = "Chyler",
+                lastName = "Leigh",
+                phoneNumber = "(61) 42424-5656",
                 id = 16464630,
                 amount = 156.78,
-                clientId = 1646463,
-                image = "https://cdn-04.independent.ie/migration_catalog/article29020325.ece/56f13/AUTOCROP/w620/katie-mcgrath"
+                clientId = 1646463
+                //image = "https://cdn-04.independent.ie/migration_catalog/article29020325.ece/56f13/AUTOCROP/w620/katie-mcgrath"
             )
             accounts.add(account1)
             accounts.add(account2)

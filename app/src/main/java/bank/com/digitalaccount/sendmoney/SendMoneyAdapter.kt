@@ -31,10 +31,10 @@ class SendMoneyAdapter(
     inner class SendMoneyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(account: AccountReceiverUIModel) {
-            if(account.image != null){
+            if (account.image != null) {
                 itemView.sdv_image_user_account_transfer.visibility = View.VISIBLE
-                account.image?.let { itemView.sdv_image_user_account_transfer.setImageURI(it) }
-            }else{
+                itemView.sdv_image_user_account_transfer.setImageURI(account.image)
+            } else {
                 getNameInitials(account.fistName, account.lastName)
             }
             itemView.tv_username_account_transfer.text = account.formattingUserName()
@@ -42,23 +42,26 @@ class SendMoneyAdapter(
             imageTapped(account)
             itemTapped(account)
         }
-        private fun getNameInitials(firstName: String, lastName: String){
+
+        private fun getNameInitials(firstName: String, lastName: String) {
             val firstInitial = firstName[0]
             val lastInitial = lastName[0]
             val initials = "$firstInitial$lastInitial".toUpperCase()
-            itemView.tv_username_letters.text = initials
-            itemView.tv_username_letters.visibility = View.VISIBLE
-            itemView.sdv_image_user_account_transfer.visibility = View.INVISIBLE
+            with(itemView) {
+                tv_username_letters.text = initials
+                tv_username_letters.visibility = View.VISIBLE
+                sdv_image_user_account_transfer.visibility = View.INVISIBLE
+            }
         }
 
-        private fun imageTapped(account: AccountReceiverUIModel){
+        private fun imageTapped(account: AccountReceiverUIModel) {
             itemView.sdv_image_user_account_transfer.clicks()
-                .subscribe{
+                .subscribe {
                     publish.onNext(Interaction.ImageTapped(account))
                 }
         }
 
-        private fun itemTapped(account: AccountReceiverUIModel){
+        private fun itemTapped(account: AccountReceiverUIModel) {
             itemView.clicks().subscribe {
                 publish.onNext(Interaction.ItemTapped(account))
             }

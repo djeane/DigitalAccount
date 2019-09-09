@@ -22,7 +22,12 @@ class DialogToSendMoney : DialogFragment() {
         layoutInflater.inflate(R.layout.dialog_send_money, root, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        account.image?.let { sp_user_image.setImageURI(it) }
+        if (account.image != null) {
+            sp_user_image.visibility = View.VISIBLE
+            account.image?.let { sp_user_image.setImageURI(it) }
+        } else {
+            getNameInitials(account.fistName, account.lastName)
+        }
         tv_username.text = account.formattingUserName()
         et_amount.hint?.let { et_amount.setSelection(0) }
         tv_phone_number.text = account.formattingPhoneNumber()
@@ -35,6 +40,15 @@ class DialogToSendMoney : DialogFragment() {
             }
         }
         applyCurrencyMask()
+    }
+
+    private fun getNameInitials(firstName: String, lastName: String) {
+        val firstInitial = firstName[0]
+        val lastInitial = lastName[0]
+        val initials = "$firstInitial$lastInitial".toUpperCase()
+        tv_username_letters.text = initials
+        tv_username_letters.visibility = View.VISIBLE
+        sp_user_image.visibility = View.INVISIBLE
     }
 
     private fun applyCurrencyMask() {

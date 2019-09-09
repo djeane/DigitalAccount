@@ -89,6 +89,7 @@ class SendMoneyActivity : BaseActivity() {
                     Toast.LENGTH_LONG,
                     R.style.SuccessToast
                 ).show()
+                backToHome()
             }, 3000)
         } else {
             dialog.dismiss()
@@ -98,6 +99,10 @@ class SendMoneyActivity : BaseActivity() {
                 R.style.FailToast
             ).show()
         }
+    }
+
+    private fun backToHome(){
+        onBackPressed()
     }
 
     private fun sendMoney() {
