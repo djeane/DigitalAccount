@@ -5,14 +5,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         android:layout_gravity="bottom"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
     <com.facebook.drawee.view.SimpleDraweeView
-            android:layout_width="30sp"
-            android:layout_height="30sp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
             app:roundingBorderWidth="1dp"
             app:roundAsCircle="true"
             app:roundingBorderColor="@color/colorAccent"
@@ -26,8 +25,8 @@
 
     <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_username_letters"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:textSize="16sp"
             tools:text="SA"
             android:gravity="center"
@@ -39,14 +38,14 @@
             android:visibility="invisible"/>
 
     <LinearLayout
-            android:layout_width="87dp"
+            android:layout_width="60dp"
             android:layout_height="0dp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/sdv_user_image"
             android:id="@+id/constraintLayout"
             app:layout_constraintStart_toStartOf="@+id/sdv_user_image"
             app:layout_constraintEnd_toEndOf="@+id/sdv_user_image"
-            app:layout_constraintHorizontal_bias="0.489">
+            >
 
         <View
                 android:id="@+id/view_graphic"
