@@ -5,6 +5,6 @@ import java.io.Serializable
 
 data class AccountSenderRequest(
     @SerializedName("ClienteId") val clienteId: Int,
-    @SerializedName("token") val token: String,
+    @SerializedName("token") var token: String? = "",
     @SerializedName("valor") val amount: Double
 ) : Serializable

@@ -18,15 +18,15 @@ class ModelInjection {
         import(ApiInjection().apiModule)
 
         bind<GenerateTokenModel>(GENERATE_TOKEN_MODEL) with singleton {
-            GenerateTokenModel(digitalAccountApi = instance())
+            GenerateTokenModel(digitalAccountApi = instance(), preferences = instance())
         }
 
         bind<TransfersHistoryModel>(TRANSFER_HISTORY_MODEL) with singleton {
-            TransfersHistoryModel(digitalAccountApi = instance())
+            TransfersHistoryModel(digitalAccountApi = instance(), preferences = instance())
         }
 
         bind<SendMoneyModel>(InjectionTags.SEND_MONEY_MODEL) with singleton {
-            SendMoneyModel(digitalAccountApi = instance())
+            SendMoneyModel(digitalAccountApi = instance(), preferences = instance())
         }
     }
 }

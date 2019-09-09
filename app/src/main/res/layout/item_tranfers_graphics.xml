@@ -23,6 +23,38 @@
             app:layout_constraintEnd_toEndOf="parent"
             />
 
+    <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/sdv_user_image"
+            android:id="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/sdv_user_image"
+            app:layout_constraintEnd_toEndOf="@+id/sdv_user_image">
+
+        <View
+                android:id="@+id/view_graphic"
+                android:layout_width="3dp"
+                android:layout_height="150dp"
+                android:background="@drawable/background_gradient_reverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_black_dot"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            android:id="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            />
+
     <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_username_letters"
             android:layout_width="40dp"
@@ -33,34 +65,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/text_white"
+            android:textColor="@color/colorAccent"
             android:background="@drawable/textview_background"
             android:visibility="invisible"/>
-
-    <LinearLayout
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/sdv_user_image"
-            android:id="@+id/constraintLayout"
-            app:layout_constraintStart_toStartOf="@+id/sdv_user_image"
-            app:layout_constraintEnd_toEndOf="@+id/sdv_user_image"
-            >
-
-        <View
-                android:id="@+id/view_graphic"
-                android:layout_width="2dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_gradient"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
-
-    </LinearLayout>
-
 
     <TextView
             android:id="@+id/tv_amount"
@@ -73,6 +80,6 @@
             app:layout_constraintStart_toStartOf="@+id/constraintLayout"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintVertical_bias="1.0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,7 @@ class SendMoneyActivity : BaseActivity() {
 
     private val publish by lazy { PublishSubject.create<SendMoneyAdapter.Interaction>() }
     var amount = 0.0
+    private val context by lazy { this@SendMoneyActivity }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +48,8 @@ class SendMoneyActivity : BaseActivity() {
 
     private fun setAdapter() {
         rv_accounts_transfer.apply {
-            layoutManager = LinearLayoutManager(this@SendMoneyActivity)
-            adapter = SendMoneyAdapter(
-                this@SendMoneyActivity, TransferAccountsUiModel.generateUsersTransferList(),
-                publish
-            )
+            layoutManager = LinearLayoutManager(context)
+            adapter = SendMoneyAdapter(context, TransferAccountsUiModel.generateUsersTransferList(), publish)
         }
     }
 
@@ -84,20 +82,12 @@ class SendMoneyActivity : BaseActivity() {
             Handler().postDelayed({
                 dialog.dismiss()
                 onStopLoading()
-                StyleableToast.makeText(
-                    this, "Sua transferência de R$ $amount foi realizada!",
-                    Toast.LENGTH_LONG,
-                    R.style.SuccessToast
-                ).show()
+                StyleableToast.makeText(context, "Sua transferência de R$ $amount foi realizada!", Toast.LENGTH_LONG, R.style.SuccessToast).show()
                 backToHome()
             }, 3000)
         } else {
             dialog.dismiss()
-            StyleableToast.makeText(
-                this, "O valor a ser transferido deve ser maior que R$ 10,00.",
-                Toast.LENGTH_LONG,
-                R.style.FailToast
-            ).show()
+            StyleableToast.makeText(context, "O valor a ser transferido deve ser maior que R$ 10,00.", Toast.LENGTH_LONG, R.style.FailToast).show()
         }
     }
 

@@ -11,7 +11,7 @@ import io.reactivex.Observable
 class TransferHistoryViewModel(private val transfersHistoryModel: TransfersHistoryModel) : BaseViewModel() {
 
     fun getTransfers(): Observable<List<AccountTransferUiModel>> =
-        transfersHistoryModel.getTransfers("cdc46d46cd6c")
+        transfersHistoryModel.getTransfers()
             .applyIoToMainThread()
             .applyLoading(loadingSubject)
             .flatMap {

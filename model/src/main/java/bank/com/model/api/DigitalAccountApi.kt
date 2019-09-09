@@ -18,7 +18,7 @@ interface DigitalAccountApi {
     ): Single<String>
 
     @GET("/GetTransfers")
-    fun getTransfers(@Query("token") token: String = "26665465456"): Observable<List<AccountReceiverResponse>>
+    fun getTransfers(@Query("token") token: String?): Observable<List<AccountReceiverResponse>>
 
     @POST("/SendMoney")
     fun sendMoney(@Body account: AccountSenderRequest): Single<Boolean>

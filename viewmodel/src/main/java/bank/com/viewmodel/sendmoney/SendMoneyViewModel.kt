@@ -11,12 +11,14 @@ import io.reactivex.Single
 
 class SendMoneyViewModel(private val sendMoneyModel: SendMoneyModel) : BaseViewModel() {
 
-    fun sendMoney(id: Int = PERSONAL_ID, amount: Double, token: String = "nkmdfmklfmkdmf"): Single<Boolean> =
-        sendMoneyModel.sendMoney(AccountSenderRequest(clienteId = id, amount = amount, token = token))
+    fun sendMoney(id: Int = PERSONAL_ID, amount: Double): Single<Boolean> =
+        sendMoneyModel.sendMoney(AccountSenderRequest(clienteId = id, amount = amount, token = getToken()))
             .applyIoToMainThread()
             .applyLoading(loadingSubject)
             .flatMap {
                 Single.just(it)
             }
+
+    private fun getToken(): String? = sendMoneyModel.getToken()
 
 }
