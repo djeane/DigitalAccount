@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import bank.com.digitalaccount.R
 import bank.com.shared.annotations.Inject
@@ -22,11 +23,14 @@ class TransferHistoryActivity : BaseActivity() {
         viewModels.getTyped<TransferHistoryViewModel>(TRANSFER_HISTORY_MODEL)
     }
 
+    private val TAG = TransferHistoryActivity::class.java.simpleName
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transfer_history)
         setupToolbar()
         title = getString(R.string.transfer_history_title)
+        getTransfers()
         setAdapters()
     }
 
@@ -47,7 +51,9 @@ class TransferHistoryActivity : BaseActivity() {
 
     private fun getTransfers() {
         viewModel?.getTransfers()
-            ?.subscribe({}, {})
+            ?.subscribe({}, {
+                Log.e(TAG, "Erro: ${it.message}")
+            })
     }
 
     companion object {

@@ -6,6 +6,6 @@
     <color name="text_white">#FFF</color>
     <color name="dialog_background">#1F576B</color>
     <color name="transparent">#00000000</color>
+    <color name="color_error">#ff4d4d</color>
     <color name="blue_center_gradient">#003D5E</color>
-
 </resources>

@@ -3,6 +3,8 @@ package bank.com.digitalaccount.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import android.widget.Toast
 import bank.com.digitalaccount.R
 import bank.com.digitalaccount.sendmoney.SendMoneyActivity
@@ -25,22 +27,28 @@ class HomeActivity : BaseActivity() {
         viewModels.getTyped<HomeViewModel>(HOME_VIEW_MODEL)
     }
 
+    private val TAG = HomeActivity::class.java.simpleName
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        applyListeners()
-        initUi()
-        generateToken()
+        generateTokenWithoutApi()
     }
-
 
     private fun generateToken() {
         viewModel?.generateToken(PERSONAL_NAME, PERSONAL_EMAIL)
-            ?.subscribe({
-                Toast.makeText(this, "Sucesso!", Toast.LENGTH_LONG).show()
-            }, {
-                Toast.makeText(this, "Erro: ${it.message}", Toast.LENGTH_LONG).show()
+            ?.subscribe({}, {
+                Log.e(TAG, "Erro: ${it.message}")
             })?.addTo(compositeDisposable)
+    }
+
+    private fun generateTokenWithoutApi(){
+        onStartLoading()
+        Handler().postDelayed({
+            initUi()
+            applyListeners()
+            onStopLoading()
+        }, 2000)
     }
 
     override fun initUi() {

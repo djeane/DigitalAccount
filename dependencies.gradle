@@ -19,6 +19,7 @@ ext {
     rx_version = "2.2.0"
     rxbinding_version = "3.0.0"
     fresco_version = "2.0.0"
+    toast_version = "2.2.2"
     stetho_version = "1.5.1"
     android_espresso_version = "3.2.0"
     android_test_runner_version = "1.2.0"
@@ -76,6 +77,9 @@ ext {
 
     // FRESCO
     fresco = "com.facebook.fresco:fresco:$fresco_version"
+
+    //TOAST
+    toast = "com.muddzdev:styleabletoast:$toast_version"
 
     // STETHO
     stetho_libs = [

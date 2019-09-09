@@ -20,11 +20,12 @@ class MoneyTextWatcher(editText: EditText) : TextWatcher {
         if (s.isEmpty()) return
         editText.removeTextChangedListener(this)
         val cleanString = s.replace("R", "").replace("[$,.]".toRegex(), "")
-        val parsed = cleanString.trim().toDouble() / 100
-        //val parsed = BigDecimal(cleanString).setScale(2, BigDecimal.ROUND_FLOOR).divide(BigDecimal(100), BigDecimal.ROUND_FLOOR)
-        val formatted = NumberFormat.getCurrencyInstance().format(parsed)
-        editText.setText(formatted)
-        editText.setSelection(formatted.length)
-        editText.addTextChangedListener(this)
+        if(cleanString.isNotEmpty()){
+            val parsed = cleanString.trim().toDouble() / 100
+            val formatted = NumberFormat.getCurrencyInstance().format(parsed)
+            editText.setText(formatted)
+            editText.setSelection(formatted.length)
+            editText.addTextChangedListener(this)
+        }
     }
 }

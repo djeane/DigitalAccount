@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import bank.com.digitalaccount.R
@@ -15,6 +16,7 @@ import bank.com.shared.extensions.getTyped
 import bank.com.viewmodel.sendmoney.AccountReceiverUIModel
 import bank.com.viewmodel.sendmoney.SendMoneyViewModel
 import bank.com.viewmodel.sendmoney.TransferAccountsUiModel
+import com.muddzdev.styleabletoast.StyleableToast
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_send_money.*
 
@@ -27,6 +29,9 @@ class SendMoneyActivity : BaseActivity() {
         viewModels.getTyped<SendMoneyViewModel>(SEND_MONEY_VIEW_MODEL)
     }
 
+    private val TAG = SendMoneyActivity::class.java.simpleName
+    private lateinit var dialog: DialogToSendMoney
+
     private val publish by lazy { PublishSubject.create<SendMoneyAdapter.Interaction>() }
     var amount = 0.0
 
@@ -38,7 +43,6 @@ class SendMoneyActivity : BaseActivity() {
         setAdapter()
         itemClicked()
         imageClicked()
-        sendMoney()
     }
 
     private fun setAdapter() {
@@ -69,14 +73,38 @@ class SendMoneyActivity : BaseActivity() {
         if (prev != null) {
             ft.remove(prev)
         }
-        val dialog = DialogToSendMoney.getInstance(account) { sendMoney() }
+        dialog = DialogToSendMoney.getInstance(account) { sendMoneyWithoutApiCall() }
         dialog.show(ft, "dialog")
     }
 
 
+    private fun sendMoneyWithoutApiCall() {
+        if (amount > 0) {
+            onStartLoading()
+            Handler().postDelayed({
+                dialog.dismiss()
+                onStopLoading()
+                StyleableToast.makeText(
+                    this, "Sua transferência de R$ $amount foi realizada!",
+                    Toast.LENGTH_LONG,
+                    R.style.SuccessToast
+                ).show()
+            }, 3000)
+        } else {
+            dialog.dismiss()
+            StyleableToast.makeText(
+                this, "O valor a ser transferido deve ser maior que R$ 10,00.",
+                Toast.LENGTH_LONG,
+                R.style.FailToast
+            ).show()
+        }
+    }
+
     private fun sendMoney() {
         viewModel?.sendMoney(amount = amount)
-            ?.subscribe({}, {})
+            ?.subscribe({}, {
+                Log.e(TAG, "Erro: ${it.message}")
+            })
     }
 
     companion object {

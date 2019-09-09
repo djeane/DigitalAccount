@@ -79,11 +79,11 @@ abstract class BaseActivity : AppCompatActivity(), KodeinAware {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 
-    private fun onStartLoading() {
+    fun onStartLoading() {
         loadingDialog.show()
     }
 
-    private fun onStopLoading() {
+    fun onStopLoading() {
         loadingDialog.dismiss()
     }
 

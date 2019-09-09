@@ -18,6 +18,7 @@ class DialogToSendMoney : DialogFragment() {
     private val account by lazy { arguments?.getSerializable(ACCOUNT_EXTRA) as AccountReceiverUIModel }
     private val function by lazy { arguments?.getSerializable(FUNCTION_EXTRA) as () -> Unit }
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         layoutInflater.inflate(R.layout.dialog_send_money, root, false)
 
@@ -28,10 +29,10 @@ class DialogToSendMoney : DialogFragment() {
         tv_phone_number.text = account.formattingPhoneNumber()
         iv_close.setOnClickListener { this.dismiss() }
         button_send_money.setOnClickListener {
-            val cleanString = et_amount.text.toString().replace("R", "").replace("[$,.]".toRegex(), "")
-            if (cleanString.isNotEmpty()) {
+            if (et_amount.text.toString().isNotEmpty()) {
+                val cleanString = et_amount.text.toString().replace("R", "").replace("[$,.]".toRegex(), "")
                 (activity as SendMoneyActivity).amount = cleanString.trim().toDouble() / 100
-                this.dismiss()
+                function()
             }
         }
         applyCurrencyMask()
@@ -39,11 +40,6 @@ class DialogToSendMoney : DialogFragment() {
 
     private fun applyCurrencyMask() {
         et_amount.addTextChangedListener(MoneyTextWatcher(et_amount))
-    }
-
-    override fun onDismiss(dialog: DialogInterface) {
-        super.onDismiss(dialog)
-        function()
     }
 
     companion object {
