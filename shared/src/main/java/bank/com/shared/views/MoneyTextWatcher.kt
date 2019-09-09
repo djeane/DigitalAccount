@@ -1,10 +1,9 @@
 package bank.com.shared.views
 
-import android.widget.EditText
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.EditText
 import java.lang.ref.WeakReference
-import java.math.BigDecimal
 import java.text.NumberFormat
 
 

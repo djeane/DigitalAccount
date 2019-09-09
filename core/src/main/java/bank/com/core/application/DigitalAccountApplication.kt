@@ -8,7 +8,7 @@ import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.androidModule
 
-class DigitalAccountApplication: Application(), KodeinAware {
+class DigitalAccountApplication : Application(), KodeinAware {
 
     private val context by lazy { this@DigitalAccountApplication }
 
@@ -23,10 +23,11 @@ class DigitalAccountApplication: Application(), KodeinAware {
         setupStetho()
     }
 
-    private fun setupStetho(){
+    private fun setupStetho() {
         Stetho.initialize(
             Stetho.newInitializerBuilder(this)
                 .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                .build())
+                .build()
+        )
     }
 }

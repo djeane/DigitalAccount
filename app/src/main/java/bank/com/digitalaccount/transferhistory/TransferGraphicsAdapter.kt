@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import bank.com.digitalaccount.R
 import bank.com.viewmodel.sendmoney.AccountReceiverUIModel
-import com.jakewharton.rxbinding3.view.clicks
-import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.item_tranfers_graphics.view.*
 
 @SuppressLint("CheckResult")
@@ -33,5 +31,5 @@ class TransferGraphicsAdapter(
             account.image?.let { itemView.sdv_user_image.setImageURI(it) }
             itemView.tv_amount.text = account.amount.toString()
         }
-   }
+    }
 }

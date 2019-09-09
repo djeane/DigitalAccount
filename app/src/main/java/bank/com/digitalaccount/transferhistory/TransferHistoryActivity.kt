@@ -1,5 +1,6 @@
 package bank.com.digitalaccount.transferhistory
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +15,7 @@ import bank.com.viewmodel.transferhistory.TransferHistoryViewModel
 import kotlinx.android.synthetic.main.activity_transfer_history.*
 
 @Inject(TRANSFER_HISTORY_MODEL)
+@SuppressLint("CheckResult")
 class TransferHistoryActivity : BaseActivity() {
 
     private val viewModel by lazy {
@@ -41,6 +43,11 @@ class TransferHistoryActivity : BaseActivity() {
                 this@TransferHistoryActivity, TransferAccountsUiModel.generateUsersTransferList()
             )
         }
+    }
+
+    private fun getTransfers() {
+        viewModel?.getTransfers()
+            ?.subscribe({}, {})
     }
 
     companion object {

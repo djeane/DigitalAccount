@@ -48,5 +48,5 @@ dependencies {
     libs.android_tests.values().each { androidTestImplementation it }
     implementation libs.rxbinding
     implementation libs.gson
-    testImplementation libs.junit
+    libs.unit_tests.values().each { testImplementation it }
 }

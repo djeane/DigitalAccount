@@ -27,7 +27,7 @@
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Juliana Trindade"
+            tools:text="Djeane Barros"
             android:layout_marginTop="8dp"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -41,7 +41,7 @@
     <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="djeane@email.com"
+            tools:text="djeane@email.com"
             android:textSize="16sp"
             app:fontFamily="@font/amiko"
             android:textColor="@color/text_white"

@@ -2,8 +2,9 @@ package bank.com.viewmodel.transferhistory
 
 import android.annotation.SuppressLint
 import bank.com.model.transferhistory.TransfersHistoryModel
-import bank.com.shared.extensions.applyIoToMainThread
 import bank.com.shared.base.BaseViewModel
+import bank.com.shared.extensions.applyIoToMainThread
+import bank.com.shared.extensions.applyLoading
 import io.reactivex.Observable
 
 @SuppressLint("CheckResult")
@@ -12,6 +13,7 @@ class TransferHistoryViewModel(private val transfersHistoryModel: TransfersHisto
     fun getTransfers(): Observable<List<AccountTransferUiModel>> =
         transfersHistoryModel.getTransfers("cdc46d46cd6c")
             .applyIoToMainThread()
+            .applyLoading(loadingSubject)
             .flatMap {
                 val accounts = mutableListOf<AccountTransferUiModel>()
                 it.forEach { accountsResponse ->

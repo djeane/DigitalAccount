@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import bank.com.digitalaccount.R
 import bank.com.shared.annotations.Inject
@@ -26,6 +28,7 @@ class SendMoneyActivity : BaseActivity() {
     }
 
     private val publish by lazy { PublishSubject.create<SendMoneyAdapter.Interaction>() }
+    var amount = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +38,7 @@ class SendMoneyActivity : BaseActivity() {
         setAdapter()
         itemClicked()
         imageClicked()
+        sendMoney()
     }
 
     private fun setAdapter() {
@@ -62,9 +66,17 @@ class SendMoneyActivity : BaseActivity() {
     private fun showDialogToSendMoney(account: AccountReceiverUIModel) {
         val ft = supportFragmentManager!!.beginTransaction()
         val prev = supportFragmentManager!!.findFragmentByTag("dialog")
-        if (prev != null) { ft.remove(prev) }
-        val dialog = DialogToSendMoney.getInstance(account)
+        if (prev != null) {
+            ft.remove(prev)
+        }
+        val dialog = DialogToSendMoney.getInstance(account) { sendMoney() }
         dialog.show(ft, "dialog")
+    }
+
+
+    private fun sendMoney() {
+        viewModel?.sendMoney(amount = amount)
+            ?.subscribe({}, {})
     }
 
     companion object {

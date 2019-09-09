@@ -1,4 +1,4 @@
-package bank.com.digitalaccount
+package bank.com.digitalaccount.splash
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

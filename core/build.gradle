@@ -43,5 +43,5 @@ dependencies {
     libs.stetho_libs.values().each { implementation it }
     libs.android_tests.values().each { androidTestImplementation it }
     implementation libs.gson
-    testImplementation libs.junit
+    libs.unit_tests.values().each { testImplementation it }
 }

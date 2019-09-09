@@ -9,6 +9,9 @@ import androidx.appcompat.widget.Toolbar
 import bank.com.shared.R
 import bank.com.shared.annotations.Inject
 import bank.com.shared.extensions.hideKeyboard
+import bank.com.shared.views.LoadingDialog
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.closestKodein
 import org.kodein.di.generic.provider
@@ -17,6 +20,11 @@ abstract class BaseActivity : AppCompatActivity(), KodeinAware {
 
     override val kodein by closestKodein()
     protected var viewModels: MutableMap<String, BaseViewModel> = HashMap()
+
+    val compositeDisposable by lazy { CompositeDisposable() }
+    val loadingCompositeDisposable by lazy { CompositeDisposable() }
+
+    private val loadingDialog by lazy { LoadingDialog(this) }
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
@@ -31,6 +39,12 @@ abstract class BaseActivity : AppCompatActivity(), KodeinAware {
                 val viewModel = provider.invoke()
                 viewModels[tag] = viewModel
             }
+        }
+        for (vm in viewModels.values) {
+            loadingCompositeDisposable.add(vm.loadingObservable
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe { showLoading(it) })
+
         }
     }
 
@@ -47,7 +61,13 @@ abstract class BaseActivity : AppCompatActivity(), KodeinAware {
     }
 
     @CallSuper
-    open fun initUi() {}
+    open fun initUi() {
+    }
+
+    private fun showLoading(show: Boolean) {
+        if (show) onStartLoading()
+        else onStopLoading()
+    }
 
     override fun onBackPressed() {
         super.onBackPressed()
@@ -57,5 +77,20 @@ abstract class BaseActivity : AppCompatActivity(), KodeinAware {
     override fun startActivity(intent: Intent?) {
         super.startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
+
+    private fun onStartLoading() {
+        loadingDialog.show()
+    }
+
+    private fun onStopLoading() {
+        loadingDialog.dismiss()
+    }
+
+    override fun onDestroy() {
+        compositeDisposable.clear()
+        loadingCompositeDisposable.clear()
+        loadingDialog.dismiss()
+        super.onDestroy()
     }
 }
