@@ -11,8 +11,8 @@ class TransferAccountsUiModel {
                 phoneNumber = "(11) 11111-1111",
                 id = 115152,
                 clientId = 322551,
-                amount = 115.48,
-                image = "http://pm1.narvii.com/6883/afc7e8c1d6ff2a281f3ae3dbdb3186bc8289b21fr1-450-650v2_uhq.jpg"
+                amount = 115.48
+                //image = "http://pm1.narvii.com/6883/afc7e8c1d6ff2a281f3ae3dbdb3186bc8289b21fr1-450-650v2_uhq.jpg"
             )
 
 
@@ -22,8 +22,8 @@ class TransferAccountsUiModel {
                 phoneNumber = "(11) 11111-1111",
                 id = 1544555,
                 clientId = 7545330,
-                amount = 125.25,
-                image = "http://br.web.img3.acsta.net/c_215_290/pictures/17/05/11/16/34/566535.jpg"
+                amount = 125.25
+                //image = "http://br.web.img3.acsta.net/c_215_290/pictures/17/05/11/16/34/566535.jpg"
             )
 
             val account3 = AccountReceiverUIModel(
@@ -62,8 +62,8 @@ class TransferAccountsUiModel {
                 phoneNumber = "(11) 11111-1111",
                 id = 2552154,
                 amount = 258.21,
-                clientId = 2266005,
-                image = "http://www.anaivanovic.com/sites/default/files/styles/flexslider_full_mobile/public/profile.jpg?itok=50Q_EqHf"
+                clientId = 2266005
+                //image = "http://www.anaivanovic.com/sites/default/files/styles/flexslider_full_mobile/public/profile.jpg?itok=50Q_EqHf"
             )
 
             val account7 = AccountReceiverUIModel(
@@ -82,8 +82,8 @@ class TransferAccountsUiModel {
                 phoneNumber = "(11) 11111-1111",
                 id = 2121233,
                 amount = 65.84,
-                clientId = 15445,
-                image = "http://pm1.narvii.com/6557/a47ebca8de252cd5dd159949b9a7a6492b9e6ec8_hq.jpg"
+                clientId = 15445
+                //image = "http://pm1.narvii.com/6557/a47ebca8de252cd5dd159949b9a7a6492b9e6ec8_hq.jpg"
             )
 
             val account9 = AccountReceiverUIModel(

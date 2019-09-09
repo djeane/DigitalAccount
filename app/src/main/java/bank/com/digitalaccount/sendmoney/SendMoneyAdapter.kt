@@ -31,11 +31,24 @@ class SendMoneyAdapter(
     inner class SendMoneyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(account: AccountReceiverUIModel) {
-            account.image?.let { itemView.sdv_image_user_account_transfer.setImageURI(it) }
+            if(account.image != null){
+                itemView.sdv_image_user_account_transfer.visibility = View.VISIBLE
+                account.image?.let { itemView.sdv_image_user_account_transfer.setImageURI(it) }
+            }else{
+                getNameInitials(account.fistName, account.lastName)
+            }
             itemView.tv_username_account_transfer.text = account.formattingUserName()
             itemView.tv_phone_account_transfer.text = account.formattingPhoneNumber()
             imageTapped(account)
             itemTapped(account)
+        }
+        private fun getNameInitials(firstName: String, lastName: String){
+            val firstInitial = firstName[0]
+            val lastInitial = lastName[0]
+            val initials = "$firstInitial$lastInitial".toUpperCase()
+            itemView.tv_username_letters.text = initials
+            itemView.tv_username_letters.visibility = View.VISIBLE
+            itemView.sdv_image_user_account_transfer.visibility = View.INVISIBLE
         }
 
         private fun imageTapped(account: AccountReceiverUIModel){

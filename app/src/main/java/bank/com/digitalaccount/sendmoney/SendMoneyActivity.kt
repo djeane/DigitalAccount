@@ -79,7 +79,7 @@ class SendMoneyActivity : BaseActivity() {
 
 
     private fun sendMoneyWithoutApiCall() {
-        if (amount > 0) {
+        if (amount > 10) {
             onStartLoading()
             Handler().postDelayed({
                 dialog.dismiss()
