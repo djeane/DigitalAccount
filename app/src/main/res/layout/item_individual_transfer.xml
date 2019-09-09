@@ -31,8 +31,24 @@
             android:transitionName="sdv_image"
             app:backgroundImage="@color/colorPrimary"
             app:roundingBorderWidth="2dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_username_letters"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:textSize="30sp"
+            tools:text="SA"
+            android:gravity="center"
+            android:textColor="@color/text_white"
+            android:background="@drawable/textview_background"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"/>
 
     <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_username_individual_transfer"

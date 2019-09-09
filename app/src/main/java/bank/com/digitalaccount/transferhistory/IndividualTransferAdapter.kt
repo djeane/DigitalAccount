@@ -34,10 +34,26 @@ class IndividualTransferAdapter(
     inner class IndividualTransferViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(account: AccountReceiverUIModel) {
-            account.image?.let { itemView.sdv_image_user_individual_transfer.setImageURI(it) }
+            if (account.image != null) {
+                itemView.sdv_image_user_individual_transfer.visibility = View.VISIBLE
+                itemView.sdv_image_user_individual_transfer.setImageURI(account.image)
+            } else {
+                getNameInitials(account.fistName, account.lastName)
+            }
             itemView.tv_username_individual_transfer.text = account.formattingUserName()
             itemView.tv_phone_individual_transfer.text = account.formattingPhoneNumber()
             itemView.tv_amount.text = account.amount.toString()
+        }
+
+        private fun getNameInitials(firstName: String, lastName: String) {
+            val firstInitial = firstName[0]
+            val lastInitial = lastName[0]
+            val initials = "$firstInitial$lastInitial".toUpperCase()
+            with(itemView) {
+                tv_username_letters.text = initials
+                tv_username_letters.visibility = View.VISIBLE
+                sdv_image_user_individual_transfer.visibility = View.INVISIBLE
+            }
         }
     }
 }
