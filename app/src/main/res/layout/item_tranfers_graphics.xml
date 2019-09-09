@@ -73,7 +73,7 @@
             android:id="@+id/tv_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.210,10"
+            tools:text="1.210,10"
             android:fontFamily="@font/amiko"
             android:textColor="@color/colorAccent"
             app:layout_constraintTop_toTopOf="parent"

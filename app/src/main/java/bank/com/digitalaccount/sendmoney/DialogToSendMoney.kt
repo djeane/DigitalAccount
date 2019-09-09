@@ -56,8 +56,8 @@ class DialogToSendMoney : DialogFragment() {
     }
 
     companion object {
-        const val ACCOUNT_EXTRA = "ACOUNT_EXTRA"
-        const val FUNCTION_EXTRA = "FUNCTION_EXTRA"
+        val ACCOUNT_EXTRA = "${DialogToSendMoney::class.java.`package`}.ACCOUNT_EXTRA"
+        val FUNCTION_EXTRA = "${DialogToSendMoney::class.java.`package`}.FUNCTION_EXTRA"
 
         fun getInstance(account: AccountReceiverUIModel, function: () -> Unit) = DialogToSendMoney().apply {
             arguments = Bundle().apply {

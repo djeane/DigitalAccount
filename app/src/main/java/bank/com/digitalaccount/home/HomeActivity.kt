@@ -3,9 +3,7 @@ package bank.com.digitalaccount.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
-import android.widget.Toast
 import bank.com.digitalaccount.R
 import bank.com.digitalaccount.sendmoney.SendMoneyActivity
 import bank.com.digitalaccount.transferhistory.TransferHistoryActivity
@@ -32,23 +30,17 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        generateTokenWithoutApi()
+        generateToken()
     }
 
     private fun generateToken() {
         viewModel?.generateToken(PERSONAL_NAME, PERSONAL_EMAIL)
-            ?.subscribe({}, {
-                Log.e(TAG, "Erro: ${it.message}")
+            ?.subscribe({
+                initUi()
+                applyListeners()
+            }, {
+                Log.e(TAG, "${getString(R.string.errror)} ${it.message}")
             })?.addTo(compositeDisposable)
-    }
-
-    private fun generateTokenWithoutApi(){
-        onStartLoading()
-        Handler().postDelayed({
-            initUi()
-            applyListeners()
-            onStopLoading()
-        }, 2000)
     }
 
     override fun initUi() {

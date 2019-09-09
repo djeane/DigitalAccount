@@ -5,11 +5,12 @@ import bank.com.model.api.DigitalAccountApi
 import bank.com.shared.constants.PreferencesKeys.TOKEN_KEY
 import io.reactivex.Single
 
-class GenerateTokenModel(
+open class GenerateTokenModel(
     private val digitalAccountApi: DigitalAccountApi,
     private val preferences: SharedPreferences
 ) {
-    fun generateToken(name: String, email: String) = digitalAccountApi.generateToken(name, email)
+    //fun generateToken(name: String, email: String) = digitalAccountApi.generateToken(name, email)
+    fun generateToken(name: String, email: String) = Single.just("someToken")
 
     fun saveToken(token: String) =
         preferences.edit()

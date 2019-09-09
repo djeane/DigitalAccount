@@ -12,9 +12,7 @@ class TransferAccountsUiModel {
                 id = 115152,
                 clientId = 322551,
                 amount = 115.48
-                //image = "http://pm1.narvii.com/6883/afc7e8c1d6ff2a281f3ae3dbdb3186bc8289b21fr1-450-650v2_uhq.jpg"
             )
-
 
             val account2 = AccountReceiverUIModel(
                 fistName = "Solange",
@@ -23,7 +21,6 @@ class TransferAccountsUiModel {
                 id = 1544555,
                 clientId = 7545330,
                 amount = 125.25
-                //image = "http://br.web.img3.acsta.net/c_215_290/pictures/17/05/11/16/34/566535.jpg"
             )
 
             val account3 = AccountReceiverUIModel(
@@ -63,7 +60,6 @@ class TransferAccountsUiModel {
                 id = 2552154,
                 amount = 258.21,
                 clientId = 2266005
-                //image = "http://www.anaivanovic.com/sites/default/files/styles/flexslider_full_mobile/public/profile.jpg?itok=50Q_EqHf"
             )
 
             val account7 = AccountReceiverUIModel(
@@ -83,7 +79,6 @@ class TransferAccountsUiModel {
                 id = 2121233,
                 amount = 65.84,
                 clientId = 15445
-                //image = "http://pm1.narvii.com/6557/a47ebca8de252cd5dd159949b9a7a6492b9e6ec8_hq.jpg"
             )
 
             val account9 = AccountReceiverUIModel(
@@ -113,7 +108,6 @@ class TransferAccountsUiModel {
                 id = 8484,
                 amount = 94.72,
                 clientId = 464
-                //image = "https://www.thefandomentals.com/wp-content/uploads/2018/03/Katniss-screen.jpg"
             )
 
             val account12 = AccountReceiverUIModel(
@@ -123,7 +117,6 @@ class TransferAccountsUiModel {
                 id = 565565,
                 amount = 58.40,
                 clientId = 6656
-                //image = "https://c8.alamy.com/comp/C68ABF/yaya-dacosta-at-arrivals-for-the-kids-are-all-right-premiere-landmark-C68ABF.jpg"
             )
 
             val account13 = AccountReceiverUIModel(
@@ -163,7 +156,6 @@ class TransferAccountsUiModel {
                 id = 16464630,
                 amount = 125.47,
                 clientId = 1646463
-                //image = "https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/chyler-leigh_768x1024.png"
             )
 
             val account17 = AccountReceiverUIModel(
@@ -183,7 +175,6 @@ class TransferAccountsUiModel {
                 id = 145582,
                 amount = 154.85,
                 clientId = 124544
-                //image = "https://st2.depositphotos.com/3752845/10266/i/950/depositphotos_102662746-stock-photo-chyler-leigh-at-supergirl.jpg"
             )
 
             val account19 = AccountReceiverUIModel(
@@ -213,7 +204,6 @@ class TransferAccountsUiModel {
                 id = 16464630,
                 amount = 156.78,
                 clientId = 1646463
-                //image = "https://cdn-04.independent.ie/migration_catalog/article29020325.ece/56f13/AUTOCROP/w620/katie-mcgrath"
             )
             accounts.add(account1)
             accounts.add(account2)

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Digital Account</string>
+    <string name="errror">Error:</string>
+    <string name="tag_dialog">dialog</string>
+    <string name="transfer_successfully">Transferência realizada com sucesso.</string>
+    <string name="transfer_error">O valor a ser transferido deve ser maior que R$ 10,00.</string>
+    <string name="real_symbol">R$</string>
+    <string name="transfer_history_label">Histórico de envios</string>
+    <string name="send_money_label">Enviar Dinheiro</string>
+    <string name="amount_to_send">Valor a enviar:</string>
+    <string name="amount_hint">R$ 0,00</string>
+    <string name="button_send_label">Enviar</string>
 </resources>

@@ -53,7 +53,7 @@
     <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Enviar Dinheiro"
+            android:text="@string/send_money_label"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="48dp"
             android:paddingTop="8dp"
@@ -71,7 +71,7 @@
     <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Histórico de envios"
+            android:text="@string/transfer_history_label"
             android:background="@drawable/home_buttons_background"
             android:textColor="@color/text_white"
             app:layout_constraintStart_toStartOf="@+id/button_send_money"

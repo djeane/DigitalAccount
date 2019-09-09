@@ -67,12 +67,12 @@ class SendMoneyActivity : BaseActivity() {
 
     private fun showDialogToSendMoney(account: AccountReceiverUIModel) {
         val ft = supportFragmentManager!!.beginTransaction()
-        val prev = supportFragmentManager!!.findFragmentByTag("dialog")
+        val prev = supportFragmentManager!!.findFragmentByTag(getString(R.string.tag_dialog))
         if (prev != null) {
             ft.remove(prev)
         }
         dialog = DialogToSendMoney.getInstance(account) { sendMoneyWithoutApiCall() }
-        dialog.show(ft, "dialog")
+        dialog.show(ft, getString(R.string.tag_dialog))
     }
 
 
@@ -82,23 +82,33 @@ class SendMoneyActivity : BaseActivity() {
             Handler().postDelayed({
                 dialog.dismiss()
                 onStopLoading()
-                StyleableToast.makeText(context, "Sua transferência de R$ $amount foi realizada!", Toast.LENGTH_LONG, R.style.SuccessToast).show()
+                StyleableToast.makeText(
+                    context,
+                    getString(R.string.transfer_successfully),
+                    Toast.LENGTH_LONG,
+                    R.style.SuccessToast
+                ).show()
                 backToHome()
             }, 3000)
         } else {
             dialog.dismiss()
-            StyleableToast.makeText(context, "O valor a ser transferido deve ser maior que R$ 10,00.", Toast.LENGTH_LONG, R.style.FailToast).show()
+            StyleableToast.makeText(
+                context,
+                getString(R.string.transfer_error),
+                Toast.LENGTH_LONG,
+                R.style.FailToast
+            ).show()
         }
     }
 
-    private fun backToHome(){
+    private fun backToHome() {
         onBackPressed()
     }
 
     private fun sendMoney() {
         viewModel?.sendMoney(amount = amount)
             ?.subscribe({}, {
-                Log.e(TAG, "Erro: ${it.message}")
+                Log.e(TAG, "${getString(R.string.errror)}: ${it.message}")
             })
     }
 

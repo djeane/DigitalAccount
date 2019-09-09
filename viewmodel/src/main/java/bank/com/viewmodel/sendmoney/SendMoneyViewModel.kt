@@ -8,7 +8,6 @@ import bank.com.shared.extensions.applyIoToMainThread
 import bank.com.shared.extensions.applyLoading
 import io.reactivex.Single
 
-
 class SendMoneyViewModel(private val sendMoneyModel: SendMoneyModel) : BaseViewModel() {
 
     fun sendMoney(id: Int = PERSONAL_ID, amount: Double): Single<Boolean> =

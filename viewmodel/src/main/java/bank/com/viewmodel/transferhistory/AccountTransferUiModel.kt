@@ -8,12 +8,4 @@ class AccountTransferUiModel(
     val phoneNumber: String = "(11)05155-1555",
     val id: Int,
     val clientId: Int
-) {
-    fun formattingUserName(): String {
-        return "$fistName $lastName"
-    }
-
-    fun formattingPhoneNumber(): String {
-        return phoneNumber
-    }
-}
+)

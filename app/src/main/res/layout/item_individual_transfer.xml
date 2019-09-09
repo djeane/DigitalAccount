@@ -54,7 +54,7 @@
             android:id="@+id/tv_username_individual_transfer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="User Name"
+            tools:text="User Name"
             android:textStyle="bold"
             android:textSize="18sp"
             android:fontFamily="@font/amiko"
@@ -70,7 +70,7 @@
     <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="(11)00000-0000"
+            tools:text="(11)00000-0000"
             android:textSize="16sp"
             android:fontFamily="@font/amiko"
             android:textColor="@color/colorAccent"
@@ -85,7 +85,7 @@
     <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="R$ 120,00"
+            tools:text="R$ 120,00"
             android:textSize="14sp"
             android:fontFamily="@font/amiko"
             android:textColor="@color/colorAccent"

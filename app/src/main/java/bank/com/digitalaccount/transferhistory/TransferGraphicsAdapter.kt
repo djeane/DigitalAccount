@@ -35,7 +35,7 @@ class TransferGraphicsAdapter(
             } else {
                 getNameInitials(account.fistName, account.lastName)
             }
-            val amountText = "R$ ${account.amount}"
+            val amountText = "${context.getString(R.string.real_symbol)} ${account.amount}"
             itemView.tv_amount.text = amountText
             setHeightOfBars(account)
         }
