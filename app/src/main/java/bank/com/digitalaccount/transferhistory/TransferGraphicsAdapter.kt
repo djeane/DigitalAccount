@@ -5,6 +5,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import bank.com.digitalaccount.R
 import bank.com.viewmodel.sendmoney.AccountReceiverUIModel
@@ -29,7 +31,15 @@ class TransferGraphicsAdapter(
 
         fun bind(account: AccountReceiverUIModel) {
             account.image?.let { itemView.sdv_user_image.setImageURI(it) }
-            itemView.tv_amount.text = account.amount.toString()
+            itemView.tv_amount.text = "R$ ${account.amount.toString()}"
+            setHeightOfBars(account)
+        }
+
+        private fun setHeightOfBars(account: AccountReceiverUIModel){
+            val newAmount = account.amount.toString().replace("[$,.]".toRegex(), "")
+            val height = (newAmount.trim().toDouble() / 100).toInt()
+            val params = LinearLayout.LayoutParams(10, height)
+            itemView.view_graphic.layoutParams = params
         }
     }
 }

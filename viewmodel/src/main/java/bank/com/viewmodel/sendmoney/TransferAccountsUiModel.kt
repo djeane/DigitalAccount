@@ -11,7 +11,7 @@ class TransferAccountsUiModel {
                 phoneNumber = "(11) 11111-1111",
                 id = 115152,
                 clientId = 322551,
-                amount = 15.48,
+                amount = 115.48,
                 image = "http://pm1.narvii.com/6883/afc7e8c1d6ff2a281f3ae3dbdb3186bc8289b21fr1-450-650v2_uhq.jpg"
             )
 
@@ -22,7 +22,7 @@ class TransferAccountsUiModel {
                 phoneNumber = "(11) 11111-1111",
                 id = 1544555,
                 clientId = 7545330,
-                amount = 482.25,
+                amount = 125.25,
                 image = "http://br.web.img3.acsta.net/c_215_290/pictures/17/05/11/16/34/566535.jpg"
             )
 
@@ -41,7 +41,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 662067,
-                amount = 487.21,
+                amount = 87.21,
                 clientId = 5665310,
                 image = "https://pbs.twimg.com/media/C6aEHi0WgAAWygX.jpg"
             )
@@ -51,7 +51,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 56892,
-                amount = 1325.25,
+                amount = 325.25,
                 clientId = 3265600,
                 image = "https://i.pinimg.com/originals/11/90/5d/11905d12b0c4a35efa466f9715db8615.jpg"
             )
@@ -61,7 +61,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 2552154,
-                amount = 3258.21,
+                amount = 258.21,
                 clientId = 2266005,
                 image = "http://www.anaivanovic.com/sites/default/files/styles/flexslider_full_mobile/public/profile.jpg?itok=50Q_EqHf"
             )
@@ -71,7 +71,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 3006,
-                amount = 36.84,
+                amount = 136.84,
                 clientId = 655323,
                 image = "https://i.pinimg.com/280x280_RS/b6/96/63/b69663ced89d73b051eeb1d58f574d63.jpg"
             )
@@ -81,7 +81,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 2121233,
-                amount = 365.84,
+                amount = 65.84,
                 clientId = 15445,
                 image = "http://pm1.narvii.com/6557/a47ebca8de252cd5dd159949b9a7a6492b9e6ec8_hq.jpg"
             )
@@ -91,7 +91,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 5999,
-                amount = 945.45,
+                amount = 45.45,
                 clientId = 26565,
                 image = "https://static1.purebreak.com.br/articles/1/32/01/@/18847-katniss-950x0-1.jpg"
             )
@@ -101,7 +101,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 5496565,
-                amount = 654.81,
+                amount = 54.81,
                 clientId = 32656,
                 image = "https://i1.wp.com/profilesio.com/wp-content/uploads/Dina-Denoire-Bio-Age-Height-Weight-Profile-Family.jpg?fit=800%2C970&ssl=1"
             )
@@ -121,7 +121,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 565565,
-                amount = 458.4,
+                amount = 58.40,
                 clientId = 6656,
                 image = "https://c8.alamy.com/comp/C68ABF/yaya-dacosta-at-arrivals-for-the-kids-are-all-right-premiere-landmark-C68ABF.jpg"
             )
@@ -151,7 +151,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 1642131,
-                amount = 845.21,
+                amount = 45.21,
                 clientId = 4545,
                 image = "https://pbs.twimg.com/profile_images/1049168731165749248/3NErkIpF_400x400.jpg"
             )
@@ -161,7 +161,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 16464630,
-                amount = 225.47,
+                amount = 125.47,
                 clientId = 1646463,
                 image = "https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/chyler-leigh_768x1024.png"
             )
@@ -181,7 +181,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 145582,
-                amount = 654.85,
+                amount = 154.85,
                 clientId = 124544,
                 image = "https://st2.depositphotos.com/3752845/10266/i/950/depositphotos_102662746-stock-photo-chyler-leigh-at-supergirl.jpg"
             )
@@ -191,7 +191,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 16464630,
-                amount = 475.82,
+                amount = 175.82,
                 clientId = 1646463,
                 image = "https://media.fstatic.com/Cu_B-N6NrW16LyxVJSNvbZ4iMXc=/full-fit-in/290x478/media/artists/avatar/2018/05/chyler-leigh_a153114_Um7gBjh.png"
             )
@@ -201,7 +201,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 16464630,
-                amount = 562.42,
+                amount = 162.42,
                 clientId = 1646463,
                 image = "https://d27o7y1r7mnbwc.cloudfront.net/media/uploads/clients/katie-mcgrath/images/2017-02-25_204132_mcgrath_katie.jpg"
             )
@@ -211,7 +211,7 @@ class TransferAccountsUiModel {
                 lastName = "Agora",
                 phoneNumber = "(11) 11111-1111",
                 id = 16464630,
-                amount = 56.78,
+                amount = 156.78,
                 clientId = 1646463,
                 image = "https://cdn-04.independent.ie/migration_catalog/article29020325.ece/56f13/AUTOCROP/w620/katie-mcgrath"
             )
